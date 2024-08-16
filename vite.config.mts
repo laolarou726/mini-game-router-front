@@ -53,7 +53,9 @@ export default defineConfig({
       },
     }),
   ],
-  define: { 'process.env': {} },
+  define: {
+    VITE_API_BACKEND_URL: `"${process.env.VITE_API_BACKEND_URL}"`,
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
